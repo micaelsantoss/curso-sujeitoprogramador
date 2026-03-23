@@ -1,0 +1,15 @@
+.container{
+    display: flex;
+    flex-direction: column;
+    background-color: aqua;
+    width: 300px;
+    padding: 15px 10px;
+}
+
+button{
+    margin-top: 15px;   
+}
+
+.delete{
+    margin-top: 0px;
+}
