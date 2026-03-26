@@ -10,7 +10,17 @@ describe("Button component", () => {
         
         const button = screen.getByText("Botao testee");
         fireEvent.click(button);
+        fireEvent.click(button);
 
-        expect(onClick).toHaveBeenCalled();
+        expect(onClick).toHaveBeenCalledTimes(2);// clicou 2 vezes
+
+    })
+
+    it("should render with pink background if disabled", () => {
+        render( <Button onClick={() => {}} disabled={true}>Meu Botao</Button>)
+
+        const button = screen.getByRole("button", { name: "Meu Botao"});
+
+        expect(button).toHaveStyle("background-color: #fbfb");
     })
 })
